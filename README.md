@@ -12,18 +12,14 @@ Best to use Colab provided by Google to train your model. Make sure to install T
 
 ## Sample responses
 
-ME: Where did you come from?
+**ME**: Where did you come from?  
+**BLATHERSON**: The internet
 
-BLATHERSON: The internet
+**ME**: What is the color of the sky?  
+**BLATHERSON**: The color of the blue .
 
-ME: What is the color of the sky?
+**ME**: What is the best song ever?  
+**BLATHERSON**: Darude - Sandstorm
 
-BLATHERSON: The color of the blue .
-
-ME: What is the best song ever?
-
-BLATHERSON: Darude - Sandstorm
-
-ME: What is the Universe?
-
-BLATHERSON: The Universe is a lie .
+**ME**: What is the Universe?  
+**BLATHERSON**: The Universe is a lie .
