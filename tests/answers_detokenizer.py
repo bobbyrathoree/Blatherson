@@ -3,7 +3,6 @@ sys.path.insert(0, '../')
 from core.tokenizer import detokenize
 from colorama import Fore, init
 
-
 tests = [
     ['¯ \ \ \ _ ( ツ ) _ / ¯', '¯\\\\\\_(ツ)_/¯'],
     ['¯ \ \ _ ( ツ ) _ / ¯', '¯\\\\_(ツ)_/¯'],

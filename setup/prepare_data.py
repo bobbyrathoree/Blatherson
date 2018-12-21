@@ -88,7 +88,6 @@ def prepare():
                         if read >= amount:
                             rows = rows[:amount-read+len(rows)]
                             last_batch = True
-
                         # Process using multiprocessing
                         rows = pool.map(tokenize, rows, 500)
 
@@ -152,15 +151,12 @@ def prepare():
 
         # Learn BPE for both vocabs (or common vocab)
         for source, raw_vocab in data_vocab.items():
-
             if not preprocessing['cache_preparation'] or not Path('{}/cache_temp_vocab.pickle'.format(preprocessing['train_folder'])).exists() or not Path('{}/cache_temp_vocab.pickle'.format(preprocessing['train_folder'])).is_file():
 
                 # Pair stats
                 stats = Counter()
-
                 # Pair indexes
                 indices = defaultdict(lambda: defaultdict(int))
-
                 # Build 'new' vocab used for BPE learning (train_vocab will be a final vocab for NMT)
                 vocab = []
                 train_vocab[source] = Counter()
