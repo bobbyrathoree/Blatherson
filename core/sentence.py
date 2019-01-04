@@ -13,22 +13,17 @@ def replace_in_answers(answers):
 
     # For every answer
     for answer in answers:
-
         # And every regex rule
         for replace in answers_replace:
-
             difference = 0
             replace = replace.split('##->##')
             replace_from = replace[0].strip()
             replace_to = replace[1].strip()
-
             # If replace regex was found in answer
             if re.search(replace_from, answer):
-
                 # Search for all occurrences and iterate thru them again
                 regex = re.compile(replace_from)
                 for p in regex.finditer(answer):
-
                     # Calculate data
                     replace_from = p.groups()[0]
                     replace_to = re.sub(r'\\(\d+)', lambda x: p.groups()[int(x.groups()[0])], replace_to)

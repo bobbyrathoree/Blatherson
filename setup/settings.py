@@ -40,10 +40,8 @@ preprocessing = {
     #   doesn't increase number of tokens in vocab, but it's hard to make a rule for every case)
     # Note, that embedded detokenizer is forced to True while using BPE-like tokenizer
     'embedded_detokenizer': True,
-
     # Test sets' max size
     'test_size': 100,
-
     # Custom decaying scheme and training duration:
     # - trains model for certain number of epochs (number of list entries)
     # - applies learning rate for every epoch
